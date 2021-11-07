@@ -2,7 +2,12 @@
 
 namespace Alura\DesignPattern\AcoesAoGerarPedido;
 
-class CriarPedidoNoBanco
-{
+use Alura\DesignPattern\Pedido;
 
+class CriarPedidoNoBanco implements AcaoAposGerarPedido
+{
+    public function executaAcao(Pedido $pedido): void
+    {
+        echo "Salvando pedido no Banco de Dados";
+    }
 }
